@@ -1,0 +1,104 @@
+/* Meta Boxes */
+.laid-back-admin-meta-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 200;
+    padding: 30px;
+    max-width: 830px;
+    margin-left: -4%;
+}
+.so-content.panel-dialog .laid-back-admin-meta-wrapper {
+    max-width: none;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry {
+    flex-basis: 46%;
+    margin-bottom: 30px;
+    margin-left: 4%;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry:nth-child(even) {
+    /* margin-right: 0; */
+}
+h2.laid-back-admin-meta-title {
+    font-size: 22px;
+    padding: 15px 20px;
+    margin: 0;
+    background: #89a0a7;
+    color: white;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry > label {
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry > input,
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry > select,
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry > textarea {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #dedede;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry > input.checkbox {
+    width: auto;
+}
+
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry > button {
+    padding: 20px;
+    font-size: 16px;
+    background: #007cba;
+    border-radius: 0;
+    border: 0;
+    color: white;
+    width: 100%;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry.laid-back-admin-meta-entry-fullwidth {
+    flex-basis: 100%;
+    margin-right:0;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item > input {
+    padding: 8px 20px 3px 20px;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item > label {
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item > img {
+    max-width: 100%;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item > textarea {
+    padding: 8px 20px 3px 20px;
+    height: 150px;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item.laid-back-admin-meta-entry-list-item-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item.laid-back-admin-meta-entry-list-item-flex > label {
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+/* SIZING */
+@media (max-width: 767px) {
+     .laid-back-admin-meta-wrapper {
+        padding: 10px;
+    }
+     .laid-back-admin-meta-wrapper .laid-back-admin-meta-entry {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+     .laid-back-admin-meta-wrapper .laid-back-admin-meta-entry-list .laid-back-admin-meta-entry-list-item {
+        padding: 10px;
+    }
+}

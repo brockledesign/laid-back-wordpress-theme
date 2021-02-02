@@ -21,39 +21,48 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'laid-back' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'text_domain' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$laid_back_description = get_bloginfo( 'description', 'display' );
-			if ( $laid_back_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $laid_back_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'laid-back' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+		<nav id="site-navigation" class="main-navigation navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="align-vertical">
+					<div class="navbar-header page-scroll">
+						<?php
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+						?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link">
+							<img src="<?php echo esc_url( $custom_logo_url ); ?>" class="custom-logo" alt="<?php bloginfo( 'name' ); ?>" />
+						</a>
+						<?php
+						if ( is_front_page() && is_home() ) :
+							?>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php
+						else :
+							?>
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<?php
+						endif;
+						$bencurrie_description = get_bloginfo( 'description', 'display' );
+						if ( $bencurrie_description || is_customize_preview() ) :
+							?>
+							<p class="site-description"><?php echo $bencurrie_description; /* WPCS: xss ok. */ ?></p>
+						<?php endif; ?>
+					</div><!-- .site-branding -->
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'items_wrap' => '<ul id="%1$s" class="%2$s navbar-right">%3$s</ul>',
+					) );
+					?>
+				</div>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">

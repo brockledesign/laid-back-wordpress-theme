@@ -967,3 +967,78 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+/*--------------------------------------------------------------
+## Added by Brockle Design
+--------------------------------------------------------------*/
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+html, body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/* HEADER */
+.main-navigation ul {
+    display: inline-block;
+}
+.main-navigation li {
+    margin: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    z-index: 1030;
+    right: 0;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+/* PAGE */
+article.page .entry-content {
+	margin-top: 0;
+}
+.page div#primary,
+.single div#primary,
+.archive div#primary,
+.blog div#primary
+{
+	padding-top: 126px;
+}
+.page article.page {
+    margin-bottom: 0;
+}
+body.page {
+    margin-bottom: 0;
+}
+/* SIZING */
+@media (max-width: 767px) {
+	.container {
+		width: 100%;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}

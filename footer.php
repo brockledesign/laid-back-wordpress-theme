@@ -10,21 +10,27 @@
  */
 
 ?>
-
+</div><!-- #content -->
+	<div class="footer-widgets">
+		<div class="container">
+			<?php if ( is_active_sidebar( 'footer-sidebar' ) ) : ?>
+				<?php dynamic_sidebar( 'footer-sidebar' ); ?>
+			<?php endif; ?>
+		</div>
+	</div>
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'laid-back' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'laid-back' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'laid-back' ), 'laid-back', '<a href="http://www.brockledesign.co.uk/">Brockle Design</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				<div class="footerinfo left">
+					&copy; <?php echo esc_html( get_bloginfo( 'name' ) ); ?> <?php echo date("Y"); ?>
+				</div>
+				<div class="footerinfo right">
+					<?php
+						printf( esc_html__( 'Website Designed &amp; Built by %1$s.', 'theme_text_domain' ), '<a href="http://www.brockledesign.co.uk/">Brockle Design</a>' );
+					?>
+				</div>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
