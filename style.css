@@ -981,20 +981,81 @@ html, body
     padding: 0px;
     overflow-x: hidden;
 }
+p {
+	margin-top: 0;
+}
 .container {
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
 }
-/* HEADER */
-.main-navigation ul {
-    display: inline-block;
+/* link button */
+a.laid-back-linkbutton {
+	display: inline-block;
+	background: black;
+	color: white;
+	border-radius: 100px;
+	padding: 15px 50px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 15px;
+	line-height: 15px;
+	text-decoration: none;
 }
-.main-navigation li {
-    margin: 0 15px;
+a.laid-back-linkbutton:hover {
+	background: #e8e8e8;
+	color: black;
+	cursor: pointer;
+}
+a.laid-back-linkbutton.laid-back-linkbutton-white {
+	background: white;
+	color: black;
+}
+a.laid-back-linkbutton.laid-back-linkbutton-white:hover {
+	background: black;
+	color: white;
+}
+/* HEADER */
+.main-navigation {
+	background: white;
+	box-shadow: 1px 0 8px #0000009e;
+}
+.main-navigation ul {
+    display: flex;
+	align-items: center;
+}
+.main-navigation ul li a {
+    padding: 15px 25px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+	font-size: 15px;
+	line-height: 15px;
+	color: black;
+}
+.main-navigation ul li a:hover {
+    color: #e8e8e8;
+}
+.main-navigation ul li.laid-back-menu-highlight a {
+	background: black;
+	color: white;
+	border-radius: 100px;
+	padding: 15px 50px;
+	margin-left: 25px;
+}
+.main-navigation ul li.laid-back-menu-highlight a:hover {
+	background: #e8e8e8;
+	color: black;
+	cursor: pointer;
+}
+.main-navigation .align-vertical {
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+	justify-content: space-between;
+}
+.main-navigation img.custom-logo {
+	max-width: 238px;
 }
 .navbar-fixed-top, .navbar-fixed-bottom {
     position: fixed;
@@ -1021,6 +1082,25 @@ article.page .entry-content {
 body.page {
     margin-bottom: 0;
 }
+/* HOME */
+/* Home - Slider */
+.laid-back-slider-homepage-overlay {
+	text-align: center;
+	color: white;
+}
+.laid-back-slider-homepage-overlay .laid-back-slider-homepage-overlay-title {
+	font-weight: 600;
+	font-size: 65px;
+	line-height: 65px;
+	margin-bottom: 20px;
+}
+.laid-back-slider-homepage-overlay .laid-back-slider-homepage-overlay-subtitle {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 15px;
+	margin-bottom: 70px;
+}
+
 /* SIZING */
 @media (max-width: 767px) {
 	.container {
