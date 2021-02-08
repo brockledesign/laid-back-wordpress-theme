@@ -3,6 +3,7 @@
     font-size: 47px;
     line-height: 54px;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 .laid-back-section-title-wrapper .laid-back-section-title-subtitle {
     font-size: 15px;
@@ -98,6 +99,72 @@
 }
 .laid-back-social-icons-wrapper.laid-back-social-icons-wrapper-white .social-item a:hover {
     color: #e8e8e8;
+}
+/* Widget - Projects Loop */
+.laid-back-projects-loop-wrapper .archive-posts-wrapper {
+    display: flex;
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article {
+    margin-right: 2%;
+    display: flex;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    background: transparent;
+    position: relative;
+    height: 377px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article a.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transition: width 0.5s ease, max-width 0.5s ease;
+    -moz-transition: width 0.5s ease, max-width 0.5s ease;
+    -o-transition: width 0.5s ease, max-width 0.5s ease;
+    -ms-transition: width 0.5s ease, max-width 0.5s ease;
+    transition: width 0.5s ease, max-width 0.5s ease;
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article header.entry-header {
+    position: absolute;
+    bottom: 0;
+    padding: 18px;
+    text-align: center !important;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article header.entry-header h2.entry-title {
+	margin: 0;
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article header.entry-header a {
+    color: white;
+	font-weight: 300;
+	font-size: 28px;
+	line-height: 32px;
+    display: block;
+    text-decoration: none;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	-o-transition: transform 0.5s ease;
+	-ms-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+/* Archive Box - hover */
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article:hover {
+    cursor: pointer;
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article:hover header.entry-header a {
+    transform: translateY(-15px);
+}
+.laid-back-projects-loop-wrapper .archive-posts-wrapper article:hover a.post-thumbnail img {
+    max-width: 120%;
+    width: 120%;
 }
 /* SIZING */
 @media (max-width: 767px) {

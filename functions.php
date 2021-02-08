@@ -177,6 +177,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/template-posttypes.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

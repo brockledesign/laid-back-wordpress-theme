@@ -1021,6 +1021,10 @@ a.laid-back-linkbutton.laid-back-linkbutton-white:hover {
 	background: white;
 	box-shadow: 1px 0 8px #0000009e;
 }
+.main-navigation a {
+	display: flex;
+	align-items: flex-start;
+}
 .main-navigation ul {
     display: flex;
 	align-items: center;
@@ -1042,6 +1046,11 @@ a.laid-back-linkbutton.laid-back-linkbutton-white:hover {
 	border-radius: 100px;
 	padding: 15px 50px;
 	margin-left: 25px;
+	-webkit-transition: padding 0.5s ease;
+    -moz-transition: padding 0.5s ease;
+    -o-transition: padding 0.5s ease;
+    -ms-transition: padding 0.5s ease;
+    transition: padding 0.5s ease;
 }
 .main-navigation ul li.laid-back-menu-highlight a:hover {
 	background: #e8e8e8;
@@ -1054,9 +1063,19 @@ a.laid-back-linkbutton.laid-back-linkbutton-white:hover {
 	align-items: center;
 	padding: 30px 0;
 	justify-content: space-between;
+	-webkit-transition: padding 0.5s ease;
+    -moz-transition: padding 0.5s ease;
+    -o-transition: padding 0.5s ease;
+    -ms-transition: padding 0.5s ease;
+    transition: padding 0.5s ease;
 }
 .main-navigation img.custom-logo {
 	max-width: 238px;
+	-webkit-transition: width 0.5s ease, max-width 0.5s ease;
+    -moz-transition: width 0.5s ease, max-width 0.5s ease;
+    -o-transition: width 0.5s ease, max-width 0.5s ease;
+    -ms-transition: width 0.5s ease, max-width 0.5s ease;
+    transition: width 0.5s ease, max-width 0.5s ease;
 }
 .navbar-fixed-top, .navbar-fixed-bottom {
     position: fixed;
@@ -1079,10 +1098,26 @@ a.laid-back-linkbutton.laid-back-linkbutton-white:hover {
     letter-spacing: 0.1em;
     font-size: 15px;
     line-height: 15px;
+	-webkit-transition: padding 0.5s ease, bottom 0.5s ease;
+    -moz-transition: padding 0.5s ease, bottom 0.5s ease;
+    -o-transition: padding 0.5s ease, bottom 0.5s ease;
+    -ms-transition: padding 0.5s ease, bottom 0.5s ease;
+    transition: padding 0.5s ease, bottom 0.5s ease;
 }
 .main-navigation a.laid-back-header-headerlink:hover {
 	background: #37607A;
 	color: #F0CF15;
+}
+/* Header - Shrink */
+.main-navigation.navbar-shrink .align-vertical {
+	padding: 10px 0;
+}
+.main-navigation.navbar-shrink a.laid-back-header-headerlink {
+	padding: 10px 50px;
+	bottom: -18px;
+}
+.main-navigation.navbar-shrink ul li.laid-back-menu-highlight a {
+	padding: 10px 50px;
 }
 /* PAGE */
 article.page .entry-content {
@@ -1165,7 +1200,6 @@ body.page {
 	flex-basis: 49%;
 }
 
-
 /* FOOTER */
 .footer-widgets, footer.site-footer {
 	background: black;
@@ -1216,6 +1250,57 @@ footer.site-footer a {
 @media (max-width: 767px) {
 	.container {
 		width: 100%;
+	}
+	/* HEADER */
+	.main-navigation .align-vertical {
+		flex-direction: column;
+	}
+	.main-navigation ul {
+		display: none;
+	}
+	.main-navigation ul li a {
+		text-align: center;
+		display: block;
+	}
+	.main-navigation a.laid-back-header-headerlink {
+		margin: 0;
+		font-size: 13px;
+    	line-height: 13px;
+		width: 100%;
+		text-align: center;
+		display: block;
+	}
+	.main-navigation ul li.laid-back-menu-highlight a {
+	    margin-left: 0;
+	}
+	/* Header - Mobile */
+	.main-navigation .menu-toggle {
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		font-size: 30px;
+		margin: 15px 0 0 0;
+	}
+	.main-navigation.toggled ul {
+		display: block;
+	}
+	/* header - shrink */
+	.main-navigation.navbar-shrink .align-vertical {
+	    padding: 20px 0;
+	}
+	.main-navigation.navbar-shrink img.custom-logo {
+	    max-width: 150px;
+	}
+	/* HOME */
+	/* home - slider */
+	.laid-back-slider-homepage-overlay .laid-back-slider-homepage-overlay-title {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	/* CONTACT FORM */
+	.laid-back-contactform-wrapper span.wpcf7-form-control-wrap:nth-child(1), .laid-back-contactform-wrapper span.wpcf7-form-control-wrap:nth-child(2) {
+		flex-basis: 100%;
+		margin-right: 0;
 	}
 }
 @media (min-width: 768px) {

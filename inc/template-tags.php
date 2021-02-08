@@ -119,12 +119,12 @@ if ( ! function_exists( 'laid_back_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function laid_back_post_thumbnail() {
+	function laid_back_post_thumbnail($includelink = false) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
 
-		if ( is_singular() ) :
+		if ( is_singular() && $includelink == false) :
 			?>
 
 			<div class="post-thumbnail">
