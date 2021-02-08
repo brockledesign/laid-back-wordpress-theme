@@ -88,7 +88,7 @@ class laid_back_partner_box_widget extends WP_Widget {
 				<?php echo $partnerTitle; ?>
 			</div>
 			<div class="laid-back-partner-box-description fade-on-scroll">
-				<?php echo $description; ?>
+				<?php echo wpautop($description); ?>
 			</div>
         </div>
 		<?php

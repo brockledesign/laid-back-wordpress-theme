@@ -16,6 +16,7 @@ function laid_back_custom_widgets_init() {
     register_widget( 'laid_back_section_title_widget' );
     register_widget( 'laid_back_service_icon_widget' );
     register_widget( 'laid_back_partner_box_widget' );
+    register_widget( 'laid_back_social_icons_widget' );
 }
 add_action( 'widgets_init', 'laid_back_custom_widgets_init' );
 
@@ -25,3 +26,4 @@ add_action( 'widgets_init', 'laid_back_custom_widgets_init' );
 require get_template_directory() . '/inc/widgets/widget-section-title.php';
 require get_template_directory() . '/inc/widgets/widget-service-icon.php';
 require get_template_directory() . '/inc/widgets/widget-partner-box.php';
+require get_template_directory() . '/inc/widgets/widget-social-icons.php';

@@ -60,6 +60,9 @@
 						'items_wrap' => '<ul id="%1$s" class="%2$s navbar-right">%3$s</ul>',
 					) );
 					?>
+					<?php if(get_theme_mod('headerinfo_headerlink_text') != '') { ?>
+						<a href="<?php echo get_theme_mod('headerinfo_headerlink_url'); ?>" class="laid-back-header-headerlink"><?php echo get_theme_mod('headerinfo_headerlink_text'); ?></a>
+					<?php } ?>
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->

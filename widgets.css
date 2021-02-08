@@ -45,6 +45,60 @@
     line-height: 25px;
     font-weight: 300;
 }
+/* Widget - Partner Box */
+.laid-back-partner-box-wrapper {
+    text-align: center;
+}
+.laid-back-partner-box-wrapper .laid-back-partner-box-name {
+    font-size: 23px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.laid-back-partner-box-wrapper .laid-back-partner-box-title {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.laid-back-partner-box-wrapper .laid-back-partner-box-description {
+    font-size: 14px;
+    line-height: 18px;
+}
+/* Widget - Social Icons */
+.laid-back-social-icons-wrapper {
+    display: flex;
+}
+.laid-back-social-icons-wrapper .social-item {
+    margin-right: 10px;
+}
+.laid-back-social-icons-wrapper .social-item:last-child {
+    margin-right: 0;
+}
+.laid-back-social-icons-wrapper .social-item a {
+    font-size: 26px;
+    line-height: 26px;
+    color: #000;
+}
+.laid-back-social-icons-wrapper .social-item a:hover {
+    color: #FFA75D;
+}
+/* align - right */
+.laid-back-social-icons-wrapper.laid-back-social-icons-wrapper-align-right {
+    justify-content: flex-end;
+}
+/* align - center */
+.laid-back-social-icons-wrapper.laid-back-social-icons-wrapper-align-center {
+    justify-content: center;
+}
+/* white */
+.laid-back-social-icons-wrapper.laid-back-social-icons-wrapper-white .social-item a {
+    color: white;
+}
+.laid-back-social-icons-wrapper.laid-back-social-icons-wrapper-white .social-item a:hover {
+    color: #e8e8e8;
+}
 /* SIZING */
 @media (max-width: 767px) {
     /* Widget - Section Title */
