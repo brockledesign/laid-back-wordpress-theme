@@ -88,3 +88,16 @@ function footer_sidebar() {
     );
 }
 add_action( 'widgets_init', 'footer_sidebar' );
+
+/* Get post excerpt by ID */
+function laid_back_get_the_excerpt_id($post_id, $characters = 260) {
+	global $post;
+	$save_post = $post;
+	$post = get_post($post_id);
+	$output = get_the_excerpt();
+	$output = substr($output, 0, $characters);
+	$output = substr($output, 0, strrpos($output, ' '));
+	$output .= '...';
+	$post = $save_post;
+	return $output;
+}

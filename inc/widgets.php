@@ -18,6 +18,7 @@ function laid_back_custom_widgets_init() {
     register_widget( 'laid_back_partner_box_widget' );
     register_widget( 'laid_back_social_icons_widget' );
     register_widget( 'laid_back_projects_loop_widget' );
+    register_widget( 'laid_back_posts_loop_widget' );
 }
 add_action( 'widgets_init', 'laid_back_custom_widgets_init' );
 
@@ -29,3 +30,4 @@ require get_template_directory() . '/inc/widgets/widget-service-icon.php';
 require get_template_directory() . '/inc/widgets/widget-partner-box.php';
 require get_template_directory() . '/inc/widgets/widget-social-icons.php';
 require get_template_directory() . '/inc/widgets/widget-projects-loop.php';
+require get_template_directory() . '/inc/widgets/widget-posts-loop.php';

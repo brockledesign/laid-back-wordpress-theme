@@ -1124,11 +1124,11 @@ article.page .entry-content {
 	margin-top: 0;
 }
 .page div#primary,
-.single div#primary,
-.archive div#primary,
+.single main#primary,
+.archive main#primary,
 .blog div#primary
 {
-	padding-top: 126px;
+	padding-top: 120px;
 }
 .page article.page {
     margin-bottom: 0;
@@ -1153,6 +1153,95 @@ body.page {
 	font-size: 15px;
 	line-height: 15px;
 	margin-bottom: 70px;
+}
+/* BLOG */
+.blog .site-main,
+.laid-back-articles-loop-wrapper,
+.archive .site-main {
+	display: flex;
+	flex-wrap: wrap;
+}
+.blog .site-main .laid-back-articles-loop-entry-wrapper,
+.laid-back-articles-loop-wrapper .laid-back-articles-loop-entry-wrapper,
+.archive .site-main .laid-back-articles-loop-entry-wrapper {
+	flex-basis: 32%;
+	margin-right: 2%;
+	margin-bottom: 30px;
+	position: relative;
+    color: #000;
+    text-decoration: none;
+	box-shadow: 0px 3px 5px #0000000f;
+	min-height: 500px;
+	background: #fff;
+	text-align: center;
+}
+.blog .site-main .laid-back-articles-loop-entry-wrapper:nth-child(3n+3),
+.laid-back-post-related-posts-loop .laid-back-articles-loop-entry-wrapper:nth-child(3n+3),
+.laid-back-articles-loop-wrapper .laid-back-articles-loop-entry-wrapper:nth-child(3n+3),
+.archive .site-main .laid-back-articles-loop-entry-wrapper:nth-child(3n+3) {
+	margin-right: 0;
+}
+.laid-back-articles-loop-entry-wrapper a.laid-back-articles-loop-entry-image {
+    height: 200px;
+	position: relative;
+    display: block;
+}
+.laid-back-articles-loop-entry-wrapper a.laid-back-articles-loop-entry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.laid-back-articles-loop-entry-wrapper .laid-back-articles-loop-entry-date {
+	font-size: 16px;
+    line-height: 16px;
+    font-weight: 800;
+    color: #f2665f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.laid-back-articles-loop-entry-wrapper .laid-back-articles-loop-entry-contentbox {
+    width: 100%;
+    padding: 30px;
+}
+.laid-back-articles-loop-entry-wrapper .laid-back-articles-loop-entry-contentbox .laid-back-articles-loop-entry-title a {
+	font-size: 19px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+.laid-back-articles-loop-entry-wrapper .laid-back-articles-loop-entry-contentbox .laid-back-articles-loop-entry-content {
+	font-size: 14px;
+    line-height: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.blog .site-main nav.posts-navigation {
+	flex-basis: 100%;
+}
+/* blog - single */
+.laid-back-post-content-wrapper {
+	display: flex;
+	margin-top: 60px;
+}
+.laid-back-post-content-wrapper .laid-back-post-content-left {
+	flex-basis: 60%;
+	margin-right: 10%;
+}
+.single nav.navigation .nav-links {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.single nav.navigation .nav-links a {
+	font-size: 19px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+	text-decoration: none;
+	color: #000;
 }
 /* Contact Form */
 .laid-back-contactform-wrapper {
@@ -1199,7 +1288,18 @@ body.page {
 .laid-back-contactform-wrapper span.wpcf7-form-control-wrap:nth-child(2) {
 	flex-basis: 49%;
 }
-
+/* contact form - alt */
+.laid-back-contactform-wrapper.laid-back-contactform-alt-wrapper input[type="text"],
+.laid-back-contactform-wrapper.laid-back-contactform-alt-wrapper input[type="tel"],
+.laid-back-contactform-wrapper.laid-back-contactform-alt-wrapper input[type="email"],
+.laid-back-contactform-wrapper.laid-back-contactform-alt-wrapper textarea {
+	background: #F7F7F7;
+}
+.laid-back-contactform-wrapper.laid-back-contactform-alt-wrapper span.wpcf7-form-control-wrap:nth-child(1),
+.laid-back-contactform-wrapper.laid-back-contactform-alt-wrapper span.wpcf7-form-control-wrap:nth-child(2) {
+	flex-basis: 100%;
+	margin-right: 0;
+}
 /* FOOTER */
 .footer-widgets, footer.site-footer {
 	background: black;
